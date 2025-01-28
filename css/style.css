@@ -260,6 +260,10 @@ body {
 #header {
     width: 100%;
     height: var(--header-height);
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: firebrick;
 }
 
 /* Sidebar */
@@ -267,7 +271,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 150px;
+    width: 50px;
     min-height: 100vh;
     margin-bottom: var(--player-height);
     background-color: rgb(0, 63, 118);
