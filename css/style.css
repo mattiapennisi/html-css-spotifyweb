@@ -3,9 +3,17 @@
 :root {
     font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --header-height: 75px;
+    --header-bg: #080b12;
+    --sidebar-bg: #000;
+    --main-bg: #141922;
     --player-height: 75px;
-    --player-bg: #000;
+    --player-bg: #282828;
+    --text-pri: #141922;
+    --text-sec: #fff;
+    --highlight: #adff2f;
 }
+
+/* Debug */
 
 .debug {
     * {
@@ -263,18 +271,21 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: firebrick;
+    z-index: 10;
+    background-color: var(--header-bg);
 }
 
 /* Sidebar */
+
 #sidebar {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 50;
     width: 50px;
     min-height: 100vh;
     margin-bottom: var(--player-height);
-    background-color: rgb(0, 63, 118);
+    background-color: var(--sidebar-bg);
 }
 
 /* Main */
@@ -283,9 +294,11 @@ body {
     width: 100%;
     height: 100vh;
     margin-bottom: var(--player-height);
+    background-color: var(--main-bg);
 }
 
 /* Player */
+
 #player {
     height: var(--player-height);
     background-color: var(--player-bg);
