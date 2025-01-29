@@ -1,3 +1,3 @@
-fix download icon position in sidebar
-make sidebar responsive
-add content to player section
+1. fix download icon position in sidebar;
+2. make sidebar responsive;
+3. add content to player section;

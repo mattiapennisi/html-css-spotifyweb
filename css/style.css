@@ -389,6 +389,15 @@ body {
     bottom: 0;
     z-index: 100;
     padding: 10px;
+
+    #player-author {
+        color: var(--text-sec);
+        margin-left: 10px;
+    }
+
+    #player-song {
+        margin-left: 10px;
+    }
 }
 
 /* Media queries */
