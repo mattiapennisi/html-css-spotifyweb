@@ -19,7 +19,7 @@
 .debug {
     * {
         border: 1px dotted black;
-        min-height: 50px;
+        min-height: 30px;
     }
 
     .col {
@@ -278,6 +278,68 @@ body {
     background-color: var(--sidebar-bg);
     overflow-wrap: break-word;
     padding: 10px;
+
+    a {
+        color: var(--text-pri);
+        margin: 0 auto;
+        width: 50%;
+
+        &:hover {
+            color: var(--text-sec);
+        }
+    }
+
+    #sidebar-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+        
+        a {
+            width: 100%;
+            padding: 3px;
+        }
+    }
+
+    #sidebar-bottom {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+        position: relative;
+        
+        a {
+            width: 40px;
+            padding: 3px;
+            margin: 0 auto;
+
+            &#profile-download {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                bottom: 35px;
+                right: -2.7px;
+
+            }
+
+            &#profile-icon {
+                color: var(--text-sec);
+                background-color: var(--text-pri);
+                border-radius: 50px;
+                width: 30px;
+            }
+        }
+    }
+
+    
+
 }
 
 /* Main */
@@ -304,6 +366,10 @@ body {
             font-size: 0.6rem;
             margin-bottom: 10px;
             font-weight: 500;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 
