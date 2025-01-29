@@ -103,6 +103,14 @@ body {
 
     /* Utility classes */
 
+    .br100 {
+        border-radius: 100px;
+    }
+
+    .display-on-bigger-view {
+        display: none;
+    }
+
     .m-auto {
         margin: 0 auto;
     }
@@ -266,10 +274,6 @@ body {
     .col12 {
         width: 100%;
     }
-
-    .br100 {
-        border-radius: 100px;
-    }
 }
 
 /* Sidebar */
@@ -284,20 +288,12 @@ body {
     a {
         color: var(--text-pri);
         margin: 0 auto;
-        width: 30px;
         display: flex;
 
-        .display-on-bigger-view {
-            display: none;
-            width: 100%;
-        }
+        
 
         &:hover {
             color: var(--text-sec);
-        }
-
-        .icon {
-            width: 30px;
         }
     }
 
@@ -320,6 +316,7 @@ body {
 
         #logo {
             display: none;
+            height: 0px;
         }
     }
 
@@ -347,8 +344,9 @@ body {
             &#profile-icon {
                 color: var(--text-sec);
                 background-color: var(--text-pri);
-                border-radius: 50px;
+                border-radius: 100px;
                 width: 30px;
+                padding: 4px;
             }
         }
     }
@@ -412,7 +410,7 @@ body {
                     color: var(--text-sec);
                 }
 
-                li:hover:after {
+                li:first-child:after {
                     border-bottom: 1px solid var(--highlight);
                     align-self: center;
                     content: '';
@@ -441,6 +439,13 @@ body {
 
             #recently-cards {
                 gap: 20px;
+            }
+        }
+
+        .card {
+
+            img:hover {
+
             }
         }
     }
@@ -502,6 +507,14 @@ body {
 
     body {
         width: 100%;
+
+        .br100 {
+            border-radius: 100px;
+        }
+
+        .display-on-bigger-view {
+            display: block;
+        }
     }
 
     .f-row-s {
@@ -610,18 +623,6 @@ body {
     
     .col12-s {
         width: 100%;
-    }
-
-    #logo-small {
-        display: none;
-    }
-
-    #logo {
-        display: block;
-    }
-
-    .display-on-bigger-view {
-        display: block;
     }
 }
 
