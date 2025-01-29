@@ -18,8 +18,7 @@
 
 .debug {
     * {
-        border: 1px dotted black;
-        min-height: 30px;
+        border: 1px dotted rgb(255, 255, 255);
     }
 
     .col {
@@ -276,13 +275,18 @@ body {
     min-height: calc(100% - var(--player-height));
     margin-bottom: var(--player-height);
     background-color: var(--sidebar-bg);
-    overflow-wrap: break-word;
     padding: 10px;
 
     a {
         color: var(--text-pri);
         margin: 0 auto;
         width: 30px;
+        display: flex;
+
+        .display-on-bigger-view {
+            display: none;
+            width: 100%;
+        }
 
         &:hover {
             color: var(--text-sec);
@@ -304,6 +308,14 @@ body {
         a {
             width: 100%;
             padding: 3px;
+
+            div {
+                width: 25px;
+            };
+        }
+
+        #logo {
+            display: none;
         }
     }
 
@@ -541,6 +553,18 @@ body {
     
     .col12-s {
         width: 100%;
+    }
+
+    #logo-small {
+        display: none;
+    }
+
+    #logo {
+        display: block;
+    }
+
+    .display-on-bigger-view {
+        display: block;
     }
 }
 
