@@ -288,9 +288,6 @@ body {
     a {
         color: var(--text-pri);
         margin: 0 auto;
-        display: flex;
-
-        
 
         &:hover {
             color: var(--text-sec);
@@ -316,7 +313,30 @@ body {
 
         #logo {
             display: none;
-            height: 0px;
+            width: 70%;
+            align-self: start;
+            margin-bottom: 10px;
+
+            @media screen and (min-width: 480px) {
+                display: block;
+            }
+        }
+
+        #logo-small {
+            display: block;
+            width: 25px;
+
+            @media screen and (min-width: 480px) {
+                display: none;
+            }
+        }
+
+        .display-on-bigger-view {
+            display: none;
+
+            @media screen and (min-width: 480px) {
+                display: block;
+            }
         }
     }
 
@@ -411,10 +431,10 @@ body {
                 }
 
                 li:first-child:after {
-                    border-bottom: 1px solid var(--highlight);
+                    border-bottom: 3px solid var(--highlight);
                     align-self: center;
                     content: '';
-                    height: 11px;
+                    height: 9px;
                     width: 30px;
                     position: absolute;
                     top: 50%;
@@ -507,14 +527,14 @@ body {
 
     body {
         width: 100%;
+    }
 
-        .br100 {
-            border-radius: 100px;
-        }
+    .br100 {
+        border-radius: 100px;
+    }
 
-        .display-on-bigger-view {
-            display: block;
-        }
+    .display-on-bigger-view {
+        display: block;
     }
 
     .f-row-s {
