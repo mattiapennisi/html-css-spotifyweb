@@ -104,7 +104,7 @@ body {
     /* Utility classes */
 
     .br100 {
-        border-radius: 100px;
+        border-radius: 100%;
     }
 
     .display-on-bigger-view {
@@ -284,6 +284,7 @@ body {
     margin-bottom: var(--player-height);
     background-color: var(--sidebar-bg);
     padding: 10px;
+    font-size: .9rem;
 
     a {
         color: var(--text-pri);
@@ -355,7 +356,7 @@ body {
 
             a {
                 font-size: .9rem;
-                margin: 0px;
+                margin: 0;
                 padding: 0px;
                 font-weight: 500;
             }
@@ -435,7 +436,7 @@ body {
     }
 
     #main-content {
-        padding: 10px;
+        padding: 30px;
         gap: 20px;
 
         #main-nav {
@@ -471,17 +472,33 @@ body {
             }
         }
 
+        h2 {
+            align-self: start;
+            color: var(--text-sec);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            align-self: start;
+            color: var(--text-pri);
+            font-weight: 300;
+            font-size: .9rem;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            max-width: 200px;
+        }
+
         #recently {
             gap: 20px;
             width: 100%;
             justify-content: start;
 
             #recently-title {
-                display: flex;
-                justify-content: start;
-                color: var(--text-sec);
-                font-weight: 700;
-                font-size: 1.2rem;
+                
 
             }
 

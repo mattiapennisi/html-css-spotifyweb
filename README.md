@@ -1,4 +1,3 @@
-1. fix download icon position in sidebar; done
-2. make sidebar responsive;
-3. add content to player section; done
-4. add main layout
+fix sidebar bottom icons and make it responsive; 
+cards containers refactoring;
+fix cards to add info and make them responsive;
