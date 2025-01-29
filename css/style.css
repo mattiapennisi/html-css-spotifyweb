@@ -280,7 +280,7 @@ body {
 
 #sidebar {
     width: var(--sidebar-width);
-    min-height: calc(100% - var(--player-height));
+    height: calc(100vh - var(--player-height));
     margin-bottom: var(--player-height);
     background-color: var(--sidebar-bg);
     padding: 10px;
@@ -325,6 +325,7 @@ body {
         #logo-small {
             display: block;
             width: 25px;
+            margin-bottom: 10px;
 
             @media screen and (min-width: 480px) {
                 display: none;
@@ -336,6 +337,31 @@ body {
 
             @media screen and (min-width: 480px) {
                 display: block;
+            }
+        }
+
+        ul {
+            color: var(--text-sec);
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding: 0px;
+            overflow-y: auto;
+            align-items: start;
+            justify-content: start;
+            max-height: 250px;
+            width: 100%;
+            margin: 10px 0 0 0;
+            padding: 10px 10px;
+
+            a {
+                font-size: .9rem;
+                margin: 0px;
+                padding: 0px;
+                font-weight: 500;
+            }
+
+            li:first-child {
+                margin-top: 30px;
             }
         }
     }
@@ -399,6 +425,8 @@ body {
             font-size: 0.6rem;
             margin-bottom: 10px;
             font-weight: 500;
+            white-space: nowrap;
+            max-width: 100%;
 
             &:hover {
                 transform: scale(1.05);
