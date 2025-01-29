@@ -282,10 +282,14 @@ body {
     a {
         color: var(--text-pri);
         margin: 0 auto;
-        width: 50%;
+        width: 30px;
 
         &:hover {
             color: var(--text-sec);
+        }
+
+        .icon {
+            width: 30px;
         }
     }
 
@@ -311,7 +315,6 @@ body {
         align-items: center;
         gap: 5px;
         width: 100%;
-        position: relative;
         
         a {
             width: 40px;
@@ -413,6 +416,7 @@ body {
     }
 
     #player-right {
+
         progress {
             width: 70%;
             height: 10px;
@@ -423,6 +427,10 @@ body {
 /* Media queries */
 
 @media screen and (min-width: 480px) {
+    :root {
+        --sidebar-width: 200px;
+    };
+
     body {
         width: 100%;
     }
@@ -534,7 +542,6 @@ body {
     .col12-s {
         width: 100%;
     }
-
 }
 
 @media screen and (min-width: 768px) {
