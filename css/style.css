@@ -402,6 +402,10 @@ body {
                     align-items: center;
                 }
 
+                li:hover {
+                    color: var(--text-sec);
+                }
+
                 li:hover:after {
                     border-bottom: 1px solid var(--highlight);
                     align-self: center;
