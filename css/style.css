@@ -386,6 +386,34 @@ body {
 
     #main-content {
         padding: 10px;
+
+        #main-nav {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-pri);
+
+            ul {
+                gap: 11px;
+
+                li {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                li:hover:after {
+                    border-bottom: 1px solid var(--highlight);
+                    align-self: center;
+                    content: '';
+                    height: 11px;
+                    width: 30px;
+                    position: absolute;
+                    top: 50%;
+                    left: 30%;
+                }
+            }
+        }
     }
 }
 
