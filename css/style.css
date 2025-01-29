@@ -266,6 +266,10 @@ body {
     .col12 {
         width: 100%;
     }
+
+    .br100 {
+        border-radius: 100px;
+    }
 }
 
 /* Sidebar */
