@@ -1,3 +1,3 @@
 Todo:
 
-add border-left to home link in sidebar;
+edit input range style

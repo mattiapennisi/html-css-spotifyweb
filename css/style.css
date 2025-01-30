@@ -326,6 +326,21 @@ body {
             };
         }
 
+        #side-home {
+            position: relative;
+        }
+
+        #side-home:after {
+            position: absolute;
+            top: -7px;
+            left: -42px;
+            border-left: 3px solid var(--highlight);
+            align-self: center;
+            content: '';
+            height: 25px;
+
+        }
+
         #logo {
             display: none;
             width: 70%;
@@ -655,7 +670,7 @@ body {
     font-weight: 300;
 
     input {
-        accent-color: var(--text-pri);
+        accent-color: var(--text-sec);
         height: 4px;
         align-self: center;
     }
@@ -752,7 +767,10 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 5px;
             width: 100%;
+            font-size: 0.5rem;
+            color: var(--text-sec);
         }
     }
 
@@ -767,15 +785,27 @@ body {
 
         #pl-right-menu {
 
+            color: var(--text-pri);
+            
             @media screen and (max-width: 756px) {
                 display: none;
+            }
+
+            &:hover {
+                color: var(--text-sec);
             }
         }
 
         #pl-right-screen {
+
+            color: var(--text-pri);
             
             @media screen and (max-width: 756px) {
                 display: none;
+            }
+
+            &:hover {
+                color: var(--text-sec);
             }
         }
 
