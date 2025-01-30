@@ -333,13 +333,12 @@ body {
 
         #side-home:after {
             position: absolute;
-            top: -7px;
-            left: -42px;
+            top: 0;
+            left: -13px;
             border-left: 3px solid var(--highlight);
             align-self: center;
             content: '';
             height: 25px;
-
         }
 
         #logo {
