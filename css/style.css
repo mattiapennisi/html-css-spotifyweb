@@ -601,6 +601,37 @@ body {
             @media screen and (min-width: 992px) {
                 width: 14%;
             }
+
+            .main-img-cont {
+                position: relative;
+
+                &:hover {
+                    .main-hover {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .main-hover {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #000000b9;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 10;
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--text-sec);
+                    font-size: 1.5rem;
+                }
+
+
+            }
+
+            
         }
 
         .text-sec {
@@ -622,6 +653,12 @@ body {
     padding: 10px;
     color: var(--text-sec);
     font-weight: 300;
+
+    input {
+        accent-color: var(--text-pri);
+        height: 4px;
+        align-self: center;
+    }
 
     #player-left {
         min-width: 100px;
@@ -653,6 +690,11 @@ body {
             
             #player-song {
                 color: var(--text-pri);
+
+                &:hover {
+                    color: var(--text-sec);
+                    text-decoration: underline;
+                }
             }
 
             #player-author {
@@ -685,6 +727,7 @@ body {
         max-width: 900px;
         flex-grow: 1;
         color: var(--text-pri);
+        gap: 10px;
 
         i:hover {
             color: var(--text-sec);
