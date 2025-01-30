@@ -290,6 +290,7 @@ body {
     padding: 10px;
     font-size: .7rem;
     box-sizing: border-box;
+    overflow-y: auto;
 
     a {
         color: var(--text-pri);
