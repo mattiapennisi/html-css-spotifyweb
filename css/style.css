@@ -587,6 +587,7 @@ body {
             align-items: stretch;
             margin-top: 20px;
             overflow-x: hidden;
+            gap: 5px;
         }
 
         .card {
@@ -623,11 +624,19 @@ body {
     font-weight: 300;
 
     #player-left {
+        min-width: 100px;
         max-width: 300px;
         width: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
 
         #player-img {
             max-width: 50px;
+
+            @media screen and (max-width: 768px) {
+                margin-right: 40px;
+            }
         }
     
         #player-left-info {
@@ -637,6 +646,10 @@ body {
             justify-content: space-around;
             gap: 2px;
             font-size: .8rem;
+
+            @media screen and (max-width: 480px) {
+                display: none;
+            }   
             
             #player-song {
                 color: var(--text-pri);
@@ -661,20 +674,79 @@ body {
             i:hover {
                 color: var(--text-sec);
             }
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
     }
 
     #player-center {
         max-width: 900px;
         flex-grow: 1;
+        color: var(--text-pri);
+
+        i:hover {
+            color: var(--text-sec);
+        }
+
+        #pl-center-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            i:nth-child(3) {
+                font-size: 1.3rem;
+            }
+
+            i:nth-child(3):hover {
+                font-size: 1.5rem;
+            }
+        }
+
+        #pl-center-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
     }
 
     #player-right {
+        min-width: 100px;
         max-width: 300px;
         width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 10px;
 
-        #player-img {
-            max-width: 50px;
+        #pl-right-menu {
+
+            @media screen and (max-width: 756px) {
+                display: none;
+            }
+        }
+
+        #pl-right-screen {
+            
+            @media screen and (max-width: 756px) {
+                display: none;
+            }
+        }
+
+        #pl-right-volume {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            input {
+                @media screen and (max-width: 480px) {
+                    display: none;
+                }
+            }
         }
     }
 }
