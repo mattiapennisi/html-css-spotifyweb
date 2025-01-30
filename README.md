@@ -1,6 +1,6 @@
 Todo:
 
-fix sidebar bottom icons and make it responsive; 
 cards containers refactoring;
 fix cards to add info and make them responsive;
 add hover effect (<i class="fa-regular fa-circle-play"></i>) to cards in main content
+bug: sidebar scrolling is bugged when view height is lower. Take a look at playlist overflow and playlist and sidebar heights. Bug's probably there
