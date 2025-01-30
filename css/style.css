@@ -85,7 +85,7 @@
     
     .col12 {
         width: 100%;
-        background-color: bisque;
+        background-color: rgb(255, 153, 29);
     }
 }
 
@@ -109,6 +109,10 @@ body {
 
     .display-on-bigger-view {
         display: none;
+
+        @media screen and (min-width: 480px) {
+            display: block;
+        }
     }
 
     .m-auto {
@@ -284,15 +288,20 @@ body {
     margin-bottom: var(--player-height);
     background-color: var(--sidebar-bg);
     padding: 10px;
-    font-size: .9rem;
+    font-size: .7rem;
+    box-sizing: border-box;
 
     a {
         color: var(--text-pri);
-        margin: 0 auto;
 
         &:hover {
             color: var(--text-sec);
         }
+
+        #crea-icon:hover {
+            background-color: var(--text-sec);
+        }
+    
     }
 
     #sidebar-top {
@@ -300,7 +309,7 @@ body {
         flex-direction: column;
         justify-content: start;
         align-items: center;
-        gap: 5px;
+        gap: 3px;
         width: 100%;
         
         a {
@@ -341,9 +350,17 @@ body {
             }
         }
 
+        #playlist-title {
+            align-self: start;
+            color: var(--text-sec);
+            margin-top: 20px;
+            margin-left: 6px;
+            font-size: 1.2rem;
+        }
+
         ul {
             color: var(--text-sec);
-            font-size: 1.3rem;
+            font-size: 1rem;
             font-weight: 700;
             padding: 0px;
             overflow-y: auto;
@@ -351,18 +368,32 @@ body {
             justify-content: start;
             max-height: 250px;
             width: 100%;
-            margin: 10px 0 0 0;
-            padding: 10px 10px;
+            padding: 0 10px;
+            margin-bottom: 20px;
 
             a {
-                font-size: .9rem;
+                font-size: .7rem;
                 margin: 0;
-                padding: 0px;
+                padding: 0;
                 font-weight: 500;
             }
 
+            li {
+                margin: 2px -3px;
+                padding: 0;
+            }
+
             li:first-child {
-                margin-top: 30px;
+                margin-top: 15px;
+            }
+
+            #crea-icon {
+                padding: 7px;
+                margin-right: 5px;
+                margin-bottom: 10px;
+                background-color: var(--text-pri);
+                color: var(--sidebar-bg);
+                aspect-ratio: 1;
             }
         }
     }
@@ -372,28 +403,77 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: end;
-        align-items: center;
+        align-items: start;
         gap: 5px;
         width: 100%;
+        padding: 0 10px;
+        
+
+        @media screen and (max-width: 480px) {
+            padding: 0px;
+        }
         
         a {
-            width: 40px;
             padding: 3px;
-            margin: 0 auto;
+        }
 
-            &#profile-download {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
+        #side-download {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: stretch;
+            align-content: center;
+            align-self: start;
+            width: 100%;
+            height: 20px;
+            background-color: green;
+
+            #download-img {
+                width: 25px;
+                aspect-ratio: 1;
+                padding-bottom: 7px;
+                margin-right: 5px;
             }
 
-            &#profile-icon {
-                color: var(--text-sec);
+            #download-text {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                align-self: center;
+
+                @media screen and (max-width: 480px) {
+                    display: none;
+                }
+            }
+        }
+
+        #sidebar-hr {
+            border-bottom: 1px solid var(--text-pri);
+            content: '';
+            width: 100%;
+            margin: auto;
+
+            @media screen and (max-width: 480px) {
+                display: none;
+            }
+        }
+
+        #side-profile {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-sec);
+            font-size: .9rem;
+            font-weight: 700;
+            width: 100%;
+            padding-top: 4px;
+
+            #profile-img {
+                width: 30px;
                 background-color: var(--text-pri);
                 border-radius: 100px;
-                width: 30px;
-                padding: 4px;
+                padding: 2px;
             }
         }
     }
