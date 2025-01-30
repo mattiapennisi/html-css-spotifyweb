@@ -528,6 +528,7 @@ body {
         justify-content: start;
         align-items: start;
         gap: 20px;
+        overflow-x: hidden;
 
         #main-nav {
             font-size: 0.7rem;
@@ -568,7 +569,7 @@ body {
             font-weight: 700;
             font-size: 1.2rem;
             margin-top: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         h3 {
@@ -576,19 +577,33 @@ body {
             color: var(--text-pri);
             font-weight: 300;
             font-size: .9rem;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .cards-cont {
             width: 100%;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: start;
+            align-items: stretch;
             margin-top: 20px;
+            overflow-x: hidden;
         }
 
         .card {
-            max-width: 100px;
+            margin: 0 0 10px 0;
+            width: 48%;
+            
+            @media screen and (min-width: 700px) {
+                    width: 24%;
+                }
+    
+            @media screen and (min-width: 992px) {
+                width: 14%;
+            }
+        }
+
+        .text-sec {
+            color: var(--text-sec);
         }
     }
 }
@@ -607,18 +622,34 @@ body {
     color: var(--text-sec);
     font-weight: 300;
 
-    #player-img {
-        max-width: 50px;
+    #player-left {
+        max-width: 300px;
+        width: auto;
+
+        #player-img {
+            max-width: 50px;
+        }
+    
+        #player-author {
+            margin-left: 10px;
+        }
+    
+        #player-song {
+            margin-left: 10px;
+            color: var(--text-pri);
+        }
+
+        #player-left-icons {
+            color: var(--text-pri);
+            margin: 0 5px;
+
+            &:hover {
+                color: var(--text-sec);
+            }
+        }
     }
 
-    #player-author {
-        color: var(--text-sec);
-        margin-left: 10px;
-    }
-
-    #player-song {
-        margin-left: 10px;
-    }
+    
 
     #progress-bar {
         display: flex;
