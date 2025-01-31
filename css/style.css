@@ -115,6 +115,8 @@ body {
         }
     }
 
+    
+
     .m-auto {
         margin: 0 auto;
     }
@@ -1179,3 +1181,73 @@ body {
         width: 100%;
     }
 }
+
+/* Bonus: input range style*/
+
+/* Common */
+.custom-range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #c5c5c5 30%, var(--text-pri) 30%);
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  /* Bar color on hover */
+  .custom-range:hover {
+    background: linear-gradient(to right, var(--highlight) 30%, var(--text-pri) 30%);
+  }
+  
+  /* Hide slider */
+  .custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: width 0.3s, height 0.3s, background 0.3s;
+  }
+  
+  /* Show slider on hover */
+  .custom-range:hover::-webkit-slider-thumb {
+    width: 12px;
+    height: 12px;
+    background: #cfcfcf;
+    border-radius: 50%;
+  }
+
+  /* Compatibility */
+  
+  .custom-range::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: none;
+    transition: width 0.3s, height 0.3s, background 0.3s;
+  }
+  
+  .custom-range:hover::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #979797;
+    border-radius: 50%;
+  }
+  
+  /* Color on progress */
+  .custom-range {
+    background: linear-gradient(
+      to right,
+      #979797 calc(var(--value, 30) * 1%),
+      var(--text-pri) calc(var(--value, 30) * 1%)
+    );
+  }
+
+  .custom-range:focus {
+    background: linear-gradient(
+      to right,
+      #979797 calc(var(--value, 30) * 1%),
+      var(--text-pri) calc(var(--value, 30) * 1%)
+    );
+  }
