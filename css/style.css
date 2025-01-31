@@ -1194,7 +1194,7 @@ body {
     outline: none;
   }
   
-  /* Bar color on hover */
+  /* Color on hover */
   .custom-range:hover {
     background: linear-gradient(to right, var(--highlight) 30%, var(--text-pri) 30%);
   }
@@ -1214,7 +1214,7 @@ body {
   .custom-range:hover::-webkit-slider-thumb {
     width: 12px;
     height: 12px;
-    background: #cfcfcf;
+    background: #c5c5c5;
     border-radius: 50%;
   }
 
@@ -1231,7 +1231,7 @@ body {
   .custom-range:hover::-moz-range-thumb {
     width: 12px;
     height: 12px;
-    background: #979797;
+    background: #c5c5c5;
     border-radius: 50%;
   }
   
